@@ -332,6 +332,15 @@ section {
   font-style: italic;
 }
 
+footer {
+  background-color: #2d2b26;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
 
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .not-row {
