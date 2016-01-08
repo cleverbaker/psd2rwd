@@ -1,0 +1,315 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+@include foundation-everything;
+
+@mixin flex-grid-row(
+  $behavior: null,
+  $width: $grid-row-width,
+  $columns: null,
+  $base: true
+) {
+  $behavior: -zf-get-options($behavior, nest collapse);
+  $margin: auto;
+
+  @if map-get($behavior, nest) {
+    $margin: -$grid-column-gutter;
+  }
+  @else {
+    max-width: $width;
+  }
+
+  @if $base {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  margin-left: $margin;
+  margin-right: $margin;
+
+  @if $columns != null {
+    @include grid-context($columns, $root) {
+      @content;
+    }
+  }
+}
+@function flex-grid-column($columns: null) {
+  $flex: 1 1 0px;
+  @if $columns == shrink {
+    $flex: 0 0 auto;
+  }
+  @else if $columns != null {
+    $flex: 0 0 grid-column($columns);
+  }
+  @return $flex;
+}
+@mixin flex-grid-column(
+  $columns: null,
+  $gutter: $grid-column-gutter
+) {
+  flex: flex-grid-column($columns);
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  // max-width fixes IE 10/11 not respecting the flex-basis property
+  @if $columns != null and $columns != shrink {
+    max-width: grid-column($columns);
+  }
+}
+
+@mixin foundation-flex-grid {
+  // Row
+  .flex-row {
+    @include flex-grid-row;
+
+    // Nesting behavior
+    & &,
+    .flex-column-row & {
+      @include flex-grid-row(nest, $base: false);
+    }
+  }
+
+  // Column
+  %flex-column {
+    @include flex-grid-column;
+  }
+
+  .flex-column,
+  .flex-columns {
+    @extend %flex-column;
+  }
+
+  // Sizing (percentage)
+  @each $size in $breakpoint-classes {
+    @include breakpoint($size) {
+      @for $i from 1 through $grid-column-count {
+        .flex-#{$size}-#{$i} {
+          flex: flex-grid-column($i);
+          max-width: grid-column($i);
+        }
+      }
+    }
+  }
+
+  // Sizing (expand)
+  @each $size in $breakpoint-classes {
+    @if $size != small {
+      @include breakpoint($size) {
+        .flex-#{$size}-expand {
+          flex: flex-grid-column();
+        }
+      }
+    }
+  }
+
+  // Sizing (shrink)
+  .flex-shrink {
+    flex: flex-grid-column(shrink);
+  }
+
+  // Auto-stacking/unstacking
+  @each $size in $breakpoint-classes {
+    @if $size != small {
+      .flex-row.#{$size}-unstack {
+        .flex-column {
+          flex: flex-grid-column(100%);
+
+          @include breakpoint($size) {
+            flex: flex-grid-column();
+          }
+        }
+      }
+    }
+  }
+
+  // Source ordering
+  @each $size in $breakpoint-classes {
+    @include breakpoint($size) {
+      @for $i from 1 through 6 {
+        .flex-#{$size}-order-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+
+  // Horizontal alignment using justify-content
+  @each $hdir, $prop in (
+    'right': flex-end,
+    'center': center,
+    'justify': space-between,
+    'spaced': space-around,
+  ) {
+    .flex-row.flex-align-#{$hdir} {
+      justify-content: $prop;
+    }
+  }
+
+  // Horizontal alignment using align-items and align-self
+  @each $vdir, $prop in (
+    'top': flex-start,
+    'bottom': flex-end,
+    'middle': center,
+    'stretch': stretch,
+  ) {
+    .flex-row.flex-align-#{$vdir} {
+      align-items: $prop;
+    }
+
+    .flex-column.flex-align-#{$vdir} {
+      align-self: $prop;
+    }
+  }
+}
+@include foundation-flex-grid;*/
+
+@font-face {
+  font-family: 'Muller';
+  src: url('Muller-ExtraBold.otf');
+}
+
+
+
+.section1 {
+
+  /* Location of the image */
+  background-image: url(../img/green-gradient.png), url(../img/bg.jpg);
+
+ /* Background image is centered vertically and horizontally at all times */
+  background-position: center bottom, center center;
+
+  /*Background image doesn't tile */
+  background-repeat: repeat-x, no-repeat;
+
+  /* ckground image is fixed in the viewport so that it doesn't move when
+     th content's height is greater than the image's height */
+  /*background-attachment: fixed;*/
+
+  /* Thiis what makes the background image rescale based
+     on the container's size */
+  background-size: auto, cover;
+
+  background-color: #fff;
+
+  /*position: absolute; top: 0; bottom: 0; left: 0; right: 0;*/
+
+  height: 100vh;
+
+  width: 100%;
+  max-width: 100%;
+
+  }
+
+.section2 {
+ color: #000;
+ background-image: url(../img/green.jpg);
+ background-repeat: repeat;
+}
+
+.top-bar {
+
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Muller', 'Open Sans';
+}
+
+.opening-headline, .convert-to-code-tagline {
+  text-align: center;
+  color: #fff;
+}
+
+.convert-to-code-tagline a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.section-responsive-features {
+  
+}
+
+.section-the-code {
+  background-color: #2d2b26;
+  color: #fff;
+  
+}
+
+section {
+  position: relative;
+}
+
+#code {
+    position: relative;
+    right: -33%;
+    top: 2em;
+    max-width: 65%;
+    height: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.circle {
+    -moz-border-radius: 16em;
+    -webkit-border-radius: 16em;
+    border-radius: 16em;
+    background-color: #ccc;
+    border-color: #ddd;
+    height: 16em;
+    width: 16em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.circle p {
+  vertical-align: middle;
+  margin-top: 45%;
+  top: -50%;
+}
+
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .not-row {
+    display: block;
+  }
+}
+
+
+
+.xbg-gradient {
+  background-image: url(../img/green-gradient.png);
+  background-repeat: repeat-x;
+  height: 218px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+  .small-center {
+    text-align: center;
+  }
+
+  .intro {
+    text-transform: capitalize;
+    min-width: 8em;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .button.hollow.intro {
+    background-color: #fff;
+  }
+
+  .device {
+    margin-top:10em;
+  }
+
+.features-check {
+  list-style-image: url("../img/check.png")
+}
