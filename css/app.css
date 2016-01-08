@@ -219,6 +219,17 @@ h1, h2, h3, h4 {
   font-family: 'Muller', 'Open Sans';
 }
 
+.client-login {
+  color: #9a9a9a;
+  text-decoration: none;
+  position: absolute;
+  right: 2rem;
+  font-size: .9rem;
+}
+.client-login:hover {
+  text-decoration: underline;
+}
+
 .intro {
   position: relative;
 }
@@ -279,6 +290,7 @@ section {
   clear: both;
 }
 
+
 .circle {
     -moz-border-radius: 16em;
     -webkit-border-radius: 16em;
@@ -301,6 +313,11 @@ section {
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .not-row {
     display: block;
+
+
+    .large-6 {  
+      padding: 3.5rem;
+    }
   }
 }
 
