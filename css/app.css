@@ -299,6 +299,14 @@ section {
   clear: both;
 }
 
+.stage-title {
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.italic {
+  font-style: italic !important;
+}
 
 .circle {
     -moz-border-radius: 16em;
@@ -318,6 +326,10 @@ section {
   top: -50%;
   font-size: 2.5rem;
   line-height: 3.3rem;
+}
+
+.sub-line {
+  font-style: italic;
 }
 
 
