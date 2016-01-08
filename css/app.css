@@ -353,6 +353,10 @@ footer a {
   }
 }
 
+@media screen and (min-width: 63.9375em), screen and (min-width: 75em) {
+  .show-for-large-only {
+    display: inline-block !important; } }
+
 
 
 .xbg-gradient {
