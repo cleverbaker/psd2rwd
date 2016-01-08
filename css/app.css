@@ -230,8 +230,9 @@
   text-decoration: none;
   font-size: .9rem;
 }
-.client-login:hover {
+.client-login:hover, .top-bar .pricing:hover {
   text-decoration: underline;
+  color: #1585cf;
 }
 
 h1, h2, h3, h4 {
