@@ -170,7 +170,9 @@
   src: url('Muller-ExtraBold.otf');
 }
 
-
+section {
+  padding: 0 2rem;
+}
 
 .section1 {
 
@@ -312,6 +314,13 @@ section {
   font-weight: normal;
 }
 
+.section-pricing {
+  /* Generated with http://gradient.quasi.ink */
+ /* background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAABqklEQVQ4T32U4U7DMAyEbSduO36PIYEQCJ5lGwxeYghtCHj/nzM6O8myIa1StaZNvtz5nPFmf2MiRCklEhGSgf05D4lUlSTHmPAtEZGJz4t3TMxMlOIdbn7dLRrQoR0w59yAjG+JiKlsjMVJHGgSmzpw/Tk3DOJmSqMQQEnj91xhcwJbzA4BsClcfVxbyuyLHTSGfVjGmFOMq+UeyFB0rnC5nRsWol4Ono419MU5dj8Cu3pVy9xZXm4XlrM40FXOrCk8B7IYSbF3EkoJxGt4DtSrsFhrCMu9QoTa6lUUuvqa8mp3a1mpAWaThkIVQo2QrHG0BxSeAmNzc+VCuBhARauUVCuwpgsIgG6nAAEHqKlHO2EnANf7O1Mk6qkKTSNaJZ591zrZa+e97It9g1IOKGzAl697G8Zjm4xTgADknIjZnOIAtn/AaJsOuPl+MNVMOqEPhYax2GlHrkz2AIwybBWFVEAA1ovffh4b0MOYSttAoZ9RHN8IBc8V6BYL8MCHHvhkqlIUZgf64df4A6h2quVLQDMjfv99NlXUMHurXAJC0UAlzaIQ0nqFf8SSUPAGw4s9AAAAAElFTkSuQmCC");
+*/
+}
+
 .italic {
   font-style: italic !important;
 }
@@ -341,6 +350,11 @@ section {
   line-height: 3.3rem;
 }
 
+  .device {
+    margin-top: -20em;
+    position: relative;
+    left:48%;
+  }
 .sub-line {
   font-style: italic;
 }
@@ -377,6 +391,12 @@ footer a {
    .section2 {
       background-image: url(../img/green.jpg);
    }
+
+   .device {
+      margin-top: -16em;
+      height: 20rem;
+
+   }
 }
 
 
@@ -392,6 +412,7 @@ footer a {
    .section2 {
       background-image: url(../img/blue.jpg);
    }
+
  }
 
 @media screen and (min-width: 63.9376em) {
@@ -435,11 +456,6 @@ footer a {
     background-color: #fff;
   }
 
-  .device {
-    margin-top:-20em;
-    position: absolute;
-    left:48%;
-  }
 
 .features-check {
   list-style-image: url("../img/check.png")
