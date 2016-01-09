@@ -295,6 +295,14 @@ section {
     height: auto;
 }
 
+.feature {
+  padding: 1.9375rem 2.9375rem 0.9375rem
+}
+
+.device-spaceholder {
+  min-height: 10em;
+}
+
 .clear {
   clear: both;
 }
