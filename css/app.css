@@ -418,8 +418,9 @@ footer a {
   }
 
   .device {
-    margin-top:4em;
+    margin-top:-20em;
     position: absolute;
+    left:48%;
   }
 
 .features-check {
