@@ -349,6 +349,11 @@ footer a {
   color: #fff;
 }
 
+.schedule-call {
+    margin-top: .953rem;
+    vertical-align: middle;
+}
+
 
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
   .not-row {
