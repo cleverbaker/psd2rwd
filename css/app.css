@@ -289,6 +289,12 @@ section {
   position: relative;
 }
 
+.devices {
+  position: absolute;
+    top: -8.75rem;
+    left: 27rem;
+}
+
 #code {
     position: relative;
     right: -33%;
@@ -327,6 +333,10 @@ section {
 
 .underline {
   text-decoration: underline !important;
+}
+
+.strikethrough {
+  text-decoration: line-through !important;
 }
 
 
