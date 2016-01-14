@@ -64,15 +64,39 @@ section {
 .client-login {}
 
 
-  .center {
-    text-align: center;
-  } 
+.center {
+  text-align: center;
+} 
 
 .clear {
   clear: both;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .intro-button {
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+
+.feature-icon {
+  max-height: 76px;
+  width: auto;
+}
+
+.faq-page p {
+  max-width: 45rem;
+}
+
+.faq-page .italic {
+  font-size: 1.282rem;
+  font-style: normal;
+  max-width: 55rem !important;
+}
+
+footer { 
+  background-color: #f6f6f6;
+  padding: 6rem 0;
 }
