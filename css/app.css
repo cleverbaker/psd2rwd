@@ -57,7 +57,10 @@ section {
 }
 
 */
-
+ol, ul {
+  padding: 1rem !important;
+  margin-left: 1rem;
+}
 
 .pricing {}
 
@@ -74,6 +77,10 @@ section {
 
 .italic {
   font-style: italic;
+}
+
+.strikethrough {
+  text-decoration: line-through;
 }
 
 .intro-button {
