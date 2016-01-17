@@ -177,6 +177,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
+.section-the-code {
+  background-color: #2d2b26;
+  color: #fff;
+  
+}
+
+.section-pricing {
+  background-color: #f6fee4;
+}
+
+
+#the-code-title {
+  margin-top: 10rem;
+}
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
