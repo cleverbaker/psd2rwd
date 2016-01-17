@@ -1,6 +1,12 @@
 
 section { 
   width: 100%
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 96%;
 }
 .section1 {
 
