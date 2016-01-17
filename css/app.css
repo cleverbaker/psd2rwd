@@ -1,4 +1,11 @@
 
+
+@font-face {
+  font-family: 'Muller';
+  src: url('Muller-ExtraBold.otf');
+}
+
+
 section { 
   width: 100%;
   padding: 2em;
@@ -99,6 +106,10 @@ ol, ul {
 
 .underline {
   border-bottom: 1px solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Muller','Georgia',sans-serif;
 }
 
 .float-none {
