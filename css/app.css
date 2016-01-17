@@ -83,6 +83,10 @@ ol, ul {
   text-decoration: line-through;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .intro-button {
   margin-left: 0 !important;
   margin-right: 0 !important;
