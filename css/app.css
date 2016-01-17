@@ -77,6 +77,10 @@ ol, ul {
   text-align: center;
 } 
 
+.feature .center {
+  text-align: left !important;
+}
+
 .text-left {
   text-align: left;
 }
@@ -106,9 +110,20 @@ ol, ul {
   margin-right: 0 !important;
 }
 
+.feature {
+  margin-top:0.5rem;
+  margin-bottom:1rem;
+}
+
 .feature-icon {
   max-height: 76px;
   width: auto;
+}
+
+.feature h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+
 }
 
 .circle {
