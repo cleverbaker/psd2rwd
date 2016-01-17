@@ -71,6 +71,10 @@ ol, ul {
   text-align: center;
 } 
 
+.text-left {
+  text-align: left;
+}
+
 .clear {
   clear: both;
 }
