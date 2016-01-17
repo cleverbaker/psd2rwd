@@ -135,7 +135,8 @@ ol, ul {
 }
 
 .circle p {
-  margin-top: 42%;
+  margin-top: 39%;
+  font-size: 1.85rem;
 }
 
 .convert-to-code-tagline {
