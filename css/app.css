@@ -118,6 +118,10 @@ ol, ul {
   background: #ddddef;
   display: inline-block;
 }
+
+.circle p {
+  margin-top: 42%;
+}
 /* Small only */
 @media screen and (max-width: 39.9375em) {
   .circle {
