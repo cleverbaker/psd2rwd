@@ -215,6 +215,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem;
   max-width: 100%
   }
+
+  .feature {
+    padding-right: 6rem !important;
+    padding-left: 2rem !important; /* TODO: should be for large displays only (too much for medium); */
+  }
 }
 
 
