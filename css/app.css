@@ -28,20 +28,26 @@ img {
 
   /* Location of the image */
  /*  background-image: url(../img/green-gradient.png), url(../img/bg.jpg); */
+background-image: url(../img/bg4_17.jpg);
+
 
  /* Background image is centered vertically and horizontally at all times */
-  background-position: center bottom, center center;
+/*  background-position: center bottom, center center;*/
+  background-position: center center;
 
   /*Background image doesn't tile */
-  background-repeat: repeat-x, no-repeat;
+/*  background-repeat: repeat-x, no-repeat;*/
 
-  /* ckground image is fixed in the viewport so that it doesn't move when
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
      th content's height is greater than the image's height */
   /*background-attachment: fixed;*/
 
   /* Thiis what makes the background image rescale based
      on the container's size */
-  background-size: auto, cover;
+/*  background-size: auto, cover;*/
+  background-size: cover;
 
   background-color: #fff;
 
