@@ -116,6 +116,10 @@ footer {
   padding: 6rem 0;
 }
 
+.caption {
+  font-size: .9rem;
+}
+
 .reveal {
     padding: 1rem 3rem;
 }
