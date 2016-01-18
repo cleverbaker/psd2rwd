@@ -198,6 +198,10 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
+#how-it-works {
+  margin-top: 3rem;
+}
+
 .section-pricing {
   background-color: #f6fee4;
 }
