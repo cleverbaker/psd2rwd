@@ -74,9 +74,9 @@
       <div class="section1 row">
       <div class="top-bar">
           <img src="img/logo.png" style="max-height:2rem; max-width: 45%; width:auto;" alt="PSD 2 RWD beta logo">
-        <div class="top-bar-links">
+        <div class="top-bar-links" data-magellan>
           <a href="#pricing" class="pricing hide-for-small-only pricing-link">Pricing</a>
-          <a href="#" class="client-login">Client Login</a>
+          <a href="#client-login" class="client-login">Client Login</a>
         </div>
       </div>
         <div class="column align-middle center ">
@@ -84,7 +84,7 @@
           <h5 class="convert-to-code-tagline">Convert your Photoshop design into <a href='#the-code' class="underline">code</a> for a responsive webpage.</h5>
 
           <div class="bg-gradient"></div>
-          <div>
+          <div data-magellan>
             <span class="not-row small-center intro-button"><a href="#how-it-works" class="medium button hollow intro">How it works</a></span>
             <span class="row small-center show-for-small-only intro-button"><a href="#pricing" class="medium button hollow intro pricing-link">Pricing</a></span>
             <span class="not-row small-center intro-button"><a href="#schedule.html" class="medium button intro" data-open="Modal1">Convert my PSD</a></span>
@@ -101,7 +101,8 @@
      <div class="large-12 columns">
             <div class="row" style="margin-top:4rem;">
             <h5 class="italic" style="margin:.62rem 1rem 2rem;">Here's what we do</h5>
-              <h5 class="value large-8 medium-10 small-12 columns end clear"><span class="underline" style="padding-bottom: 1px;">We convert your design</span> into a responsive landing page that is quality tested on all major devices and ready for launch next week.</h5>
+              <h4 class="value large-8 medium-10 small-12 columns">We convert designs into mobile-responsive we pages.</h4>
+              <p class="clear large-8 medium-10 small-12 columns"><br>We write the code, test it on all major devices, and have it ready for launch next week.
               <ul class="features-check clear" style="margin-bottom:4rem; list-style-type:none;"><li><img src="img/check.png"> responsive layout</li>
               <li><img src="img/check.png"> responsive images</li>
               <li><img src="img/check.png"> responsive menu</li>
@@ -154,7 +155,7 @@
 
     </section> <!-- section-responsive-features -->
 
-    <section class="section-the-code clear" id="the-code" style="padding-bottom:14rem;">
+    <section class="section-the-code clear" id="the-code" data-magellan-target="the-code" style="padding-bottom:14rem;">
     <div class="row">
      <h2 id="the-code-title">The Code</h2>
      <h4>Delivered ready to ship</h4>
@@ -166,14 +167,14 @@
             <li><input type="checkbox" id="ossm4" name="ossm4" checked="checked" style="margin-right:.62rem;">uses Google style guide for HTML, CSS, and JavaScript.</li>
             <li><input type="checkbox" id="ossm5" name="ossm5" checked="checked" style="margin-right:.62rem;">repository git commits can be viewed.</li>
             <li><input type="checkbox" id="ossm6" name="ossm6" checked="checked" style="margin-right:.62rem;">uses progressive enhancement practices.</li>
-            <li><input type="checkbox" id="ossm7" name="ossm7" checked="checked" style="margin-right:.62rem;">is Future Friendly. <a href="http://futurefriendlyweb.com/thinking.html" style="font-size:.9rem">more</a></li>
+            <li><input type="checkbox" id="ossm7" name="ossm7" checked="checked" style="margin-right:.62rem;">is Future Friendly. <a data-toggle="code-dropdown01" style="font-size:.9rem">more</a> <span class="dropdown-pane" id="code-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About Future Friendly and <a href="http://futurefriendlyweb.com/thinking.html">a link</a></li>
             <li><input type="checkbox" id="ossm8" name="ossm8" checked="checked" style="margin-right:.62rem;" style="padding-right:2rem;">is SEO friendly.</li>
             <li><input type="checkbox" id="ossm9" name="ossm9" checked="checked" style="margin-right:.62rem;">adheres to best security practices.</li>
           </ul>
           </div>
     </section>
 
-    <section class="section-how-it-works">
+    <section class="section-how-it-works" data-magellan-target="how-it-works">
     <div class="row center">
       <img src="img/cinema-display-with-code.png" alt="The code is presentable and production-ready" style="margin-top:-14rem">
       </div>
@@ -184,7 +185,7 @@
       </div>
      <br>
      <div class="large-8 medium-10 small-12 columns">
-        <p style="margin-left:2.5rem">1.  <a href="#before-the-sprint">Before the Sprint</a>
+        <p style="margin-left:2.5rem"  data-magellan>1.  <a href="#before-the-sprint">Before the Sprint</a>
         <br>2.  <a href="#the-sprint">The Sprint</a>
         <br>3.  <a href="#after-the-sprint">After the Sprint</a>
         <p class="quote">In product development, a sprint is a set period of time during which specific work has to be completed and made ready for review.<a href="http://searchsoftwarequality.techtarget.com/definition/Scrum-sprint" class="reference-link">*</a><br><br>
@@ -198,7 +199,7 @@
     </div>
 <hr>
      <div class="large-8 medium-10 small-12 columns">
-    <h5 class="stage-title" id="before-the-sprint">Before the Sprint</h5>
+    <h5 class="stage-title" id="before-the-sprint" data-magellan-target="before-the-sprint">Before the Sprint</h5>
     <p><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Signed NDA
     <br><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Schedule a Kickoff Call<span class="small button" style="margin-left:1.62rem; margin-bottom: 0;" data-open="Modal1">I am ready to Schedule a Kickoff Call</span>
     <br><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Your layered PSD mockup emailed/uploaded
@@ -210,7 +211,7 @@
     <hr>
 
 <div class="large-8 medium-10 small-12 columns">
-    <h5 class="stage-title" id="the-sprint">The Sprint</h5>
+    <h5 class="stage-title" id="the-sprint" data-magellan-target="the-sprint">The Sprint</h5>
 <ol>
   <li>Kickoff Call<br>
   <span class="sub-line">We review your design together on the Kickoff Call.</span></li>
@@ -237,9 +238,9 @@
 <br>
   <p><span class="italic underline">Development</span>
   <ul>
-    <li>Basecamp updates <a href="#" style="font-size:.9rem;">more</a></li>
-    <li>Github updates <a href="#" style="font-size:.9rem;">more</a></li>
-    <li>Code Delivery by 9:00 A.M. next Tuesday morning (no matter what) <a href="#" style="font-size:.9rem;">more</a></li>
+    <li>Basecamp updates <a style="font-size:.9rem;" data-toggle="dev-dropdown01">more</a> <span class="dropdown-pane" id="dev-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Basecamp updates and process</span></li> 
+    <li>Github updates <a style="font-size:.9rem;"  data-toggle="dev-dropdown02">more</a> <span class="dropdown-pane" id="dev-dropdown02" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Git commit updates and process</span></li>
+    <li>Code Delivery by 9:00 A.M. next Tuesday morning (no matter what) <a style="font-size:.9rem;"  data-toggle="dev-dropdown03">more</a> <span class="dropdown-pane" id="dev-dropdown03" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Code delivery @ Tue 0900</span></li>
   </ul>
 <br>
   <p><span class="italic underline">Demo Call</span>
@@ -260,14 +261,14 @@ Any further changes need a change order with a deadline of the following Monday.
 <hr>
 
 <div class="large-8 medium-10 small-12 columns end">
-    <h5 class="stage-title" id="after-the-sprint">After The Sprint</h5>
+    <h5 class="stage-title" id="after-the-sprint" data-magellan-target="after-the-sprint">After The Sprint</h5>
 
 <p>What are the next steps that you are going to take after your beautiful design is now a slick responsive webpage? You will probably use the code as a promotional landing page or implement it as a theme in your content management system.
 <p>But first, you will probably try it out yourself by resizing the browser window and testing it on your phone.. Then you will show it off to your boss or client, and celebrate the milestone victory.
 <p>We assume you have a technical person on your team that we are handing the code off to and that is who is going to launch the landing page or implementing the code into your CMS.
 </div>
     </section>
-    <section class="section-pricing">
+    <section class="section-pricing"  data-magellan-target="pricing">
     <div class="row">
       <h2 id="pricing">Pricing</h2>
       <p>PSD conversions are priced at $695, $925, or $1195, depending on complexity.
@@ -277,28 +278,32 @@ Any further changes need a change order with a deadline of the following Monday.
       <div class="large-4 medium-4 columns circle small-centered large-uncentered center"><p>Medium<br>$925</div>
       <div class="large-4 medium-4 columns end circle small-centered large-uncentered center float-none"><p>Large<br>$1195</div>
     </div>
-
     <div class="row">
       <div class="callout text-left small-11 medium-11 large-8 small-centered columns" style="inline-block">
        <p>Factors in complexity:
        <ul>
-         <li>Size</li>
-          <li>Number of elements</li>
-         <li>Challenges in developing the desktop to mobile transition</li>
+         <li>More than five sections per PSD</li>
+          <li>More than 12 elements per section</li>
+         <li>Complex responsive behavior</li>
          <li>Forms</li>
-         <li>Menu complexity</li>
          <li>Pop-up modals and other interactive elements</li>
+         <li>JavaScript interaction</li>
+         <li>Missing wireframes or design document (adds to complexity)</li>
       </ul>
+      <p>For estimating purposes:<br>
+      &nbsp;&nbsp;A Small may have one of the listed complexity factors.<br>
+      &nbsp;&nbsp;A Medium may have three of the listed complexity factors.<br>
+      &nbsp;&nbsp;A Large may have five or more of the listed complexity factors.<br>
 
       </div>
       <div class="medium-11 large-10 columns">
-      <p>Pricing is finalized on our Kickoff Call.
+      <p>Pricing is finalized on our Kickoff Call. 
  
       <p>Ready? <a class="medium button schedule-call" data-open="Modal1">Schedule a Kickoff Call</a>
 
-      <p><button class="small button" type="button" data-toggle="example-dropdown">Want bulk pricing?</button>
-    
-     <div class="dropdown-pane" id="example-dropdown" data-dropdown data-options="closeOnClick: true; autoFocus: false;">
+      <p><button class="small button" type="button" data-toggle="dropdown1">Want bulk pricing?</button>
+     
+     <div class="dropdown-pane" id="dropdown1" data-dropdown data-options="closeOnClick: true; autoFocus: false;">
       <div id="dropdown2">Get a <a href="#priority-membership">Priority Membership</a> to recieve up to 3 PSD conversions per month, no matter what size (Small, Medium, or Large).
       <span class="strikethrough">$2700</span> $2100 Launch Promo <!-- NOTE:add countdown here --></div>
       </div>
