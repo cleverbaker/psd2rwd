@@ -10,6 +10,14 @@
   src: url('brelarefular.otf');
 }
 
+
+html,body {
+    margin:0;
+    padding:0;
+    height:100%; /* needed for container min-height */
+  }
+
+
 body {
   /*font-family: 'Lora', serif;*/
 }
@@ -32,12 +40,12 @@ img {
 
   /* Location of the image */
  /*  background-image: url(../img/green-gradient.png), url(../img/bg.jpg); */
-background-image: url(../img/bg-enhanced.jpg);
+background-image: url(../img/bg-enhanced2.jpg);
 
 
  /* Background image is centered vertically and horizontally at all times */
 /*  background-position: center bottom, center center;*/
-  background-position: right top;
+  background-position: center center;
 
   /*Background image doesn't tile */
 /*  background-repeat: repeat-x, no-repeat;*/
@@ -57,7 +65,7 @@ background-image: url(../img/bg-enhanced.jpg);
 
   /*position: absolute; top: 0; bottom: 0; left: 0; right: 0;*/
 
-  height: 100vh;
+  min-height: 100vh;
 
   width: 100%;
   max-width: 100%;
@@ -148,8 +156,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .device {
-  margin-top: 6rem;
+ margin-top: 3rem;
   margin-right: 4%;
+  position: relative;
+  top: .62rem;
 }
 
 
@@ -244,6 +254,12 @@ h1, h2, h3, h4, h5, h6 {
 .intro-button {
   margin-left: 0.62rem !important;
   margin-right: 0.62rem !important;
+}
+
+.device {
+  position: relative;
+  top: 1rem;
+  margin-top: 4rem;
 }
 }
 
