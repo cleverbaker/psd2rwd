@@ -17,9 +17,14 @@ html,body {
     height:100%; /* needed for container min-height */
   }
 
+h1,h2,h3,h4,h5,h6{font-family: 'Muller', sans-serif;}
 
 body {
-  /*font-family: 'Lora', serif;*/
+ /* font-family: 'Brela', serif;*/
+}
+
+.brela {
+  font-family: 'Brela', serif !important;
 }
 
 
