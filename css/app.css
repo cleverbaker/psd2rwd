@@ -301,7 +301,10 @@ footer {
       border-bottom: 1px solid #0c4d78;
       padding: .4em .62em;
       color: #0c4d78 !important;
-      background-color: rgba(254,254,254,0.2); }
+      background-color: rgba(254,254,254,0.2);
+      transition: all 0.5s ease;
+
+       }
     .top-link:hover, .top-link:focus { 
       border: 1px solid #2199e8;
       color: #2199e8 !important;
