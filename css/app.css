@@ -136,6 +136,12 @@ ol, ul {
 
 .italic {
   font-style: italic;
+  font-family: 'Brela', serif;
+}
+
+.italic.underline {
+  font-family: inherit;
+}
 }
 
 .strikethrough {
@@ -315,3 +321,13 @@ footer {
       color: #2199e8 !important;
       background-color: rgba(254,254,254,0.8);
     }
+
+
+.section-the-code a {
+  color: #fbaa41;
+}
+.section-the-code .dropdown-pane a {
+  color: #2199e8;
+}
+
+#2199e8
