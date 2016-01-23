@@ -5,239 +5,398 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSD 2 RWD</title>
+
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel='stylesheet prefetch' href='css/foundation-6a.min.css'>
+
     <link rel="stylesheet" href="css/app.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#fefefe">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#fefefe">
+
+    <style>
+
+
+.section1 {
+/*  background-image: url(data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAaAAD/4QN7aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9IkNEM0U5M0Y5OEU5RDUyOUE0NTZGRjVGNjBEOTc0OTM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjMyMzRFRUNCQjgxNzExRTVCQzhDODU0MEQ2RTc4ODhBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjMyMzRFRUNBQjgxNzExRTVCQzhDODU0MEQ2RTc4ODhBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBMaWdodHJvb20gNS40IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6YmYxMzdkZWYtMzAwNy00Yjk1LThmM2UtNDE3Y2Y4NGZhZWI0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJmMTM3ZGVmLTMwMDctNGI5NS04ZjNlLTQxN2NmODRmYWViNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/tAEhQaG90b3Nob3AgMy4wADhCSU0EBAAAAAAADxwBWgADGyVHHAIAAAIAAgA4QklNBCUAAAAAABD84R+JyLfJeC80YjQHWHfr/+4AIUFkb2JlAGTAAAAAAQMAEAMCAwYAAAV1AAAFpAAABiL/2wCEABEMDAwNDBINDRIaEQ8RGh4WEhIWHiIXFxcXFyIiGh0dHR0aIiIoKSwpKCI1NTk5NTVBQUFBQUFBQUFBQUFBQUEBEhERExUTGBQUGBcTFhMXHRcYGBcdKh0dHx0dKjYnIiIiIic2MDMsLCwzMDs7NjY7O0FBQUFBQUFBQUFBQUFBQf/CABEIABUAIAMBIgACEQEDEQH/xACIAAACAwAAAAAAAAAAAAAAAAAABAMFBgEBAQEBAAAAAAAAAAAAAAAAAAECAxAAAgEDAgcAAAAAAAAAAAAAAQIDABEEEgUQMUETFBUGEQACAAQDBQkBAAAAAAAAAAABAgARIRIxAxNBgSJCUnGx0WKSssIjBBQSAQAAAAAAAAAAAAAAAAAAACD/2gAMAwEAAhEDEQAAAHNJkoue9rU0TRUTBKy+Ff/aAAgBAgABBQBb2Y10r//aAAgBAwABBQA0Bx//2gAIAQEAAQUA2yVFyllh0qyvRF/oFTDQmJ4ZoXnmIx9wRhyg83Tie570Z3YTf//aAAgBAgIGPwAf/9oACAEDAgY/AB//2gAIAQEBBj8AQswUWsJmgrAOonqHjHCwbsIPdD+VfjC3ZrZhI5JBd5MZ36VYMuYtiKTLTHUGKyJgBHm6UxHFdXhOXjFwIGbKouNw3wZy2Q3891u3onvpH02akufTwg6oyGfbVl9oMf/Z);*/ /*bg-pre.jpg*/
+
+background-image: url(data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAaAAD/4QNzaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9IkNEM0U5M0Y5OEU5RDUyOUE0NTZGRjVGNjBEOTc0OTM3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQyRUVDRUZFQjg0MTExRTU5NEFDQzAwNzc1QTQ4OTI0IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQyRUVDRUZEQjg0MTExRTU5NEFDQzAwNzc1QTQ4OTI0IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBMaWdodHJvb20gNS40IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzIzNEVFQzZCODE3MTFFNUJDOEM4NTQwRDZFNzg4OEEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzIzNEVFQzdCODE3MTFFNUJDOEM4NTQwRDZFNzg4OEEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAhQWRvYmUAZMAAAAABAwAQAwIDBgAABR4AAAVLAAAFsP/bAIQAEQwMDA0MEg0NEhoRDxEaHhYSEhYeIhcXFxcXIiIaHR0dHRoiIigpLCkoIjU1OTk1NUFBQUFBQUFBQUFBQUFBQQESERETFRMYFBQYFxMWExcdFxgYFx0qHR0fHR0qNiciIiIiJzYwMywsLDMwOzs2Njs7QUFBQUFBQUFBQUFBQUFB/8IAEQgAFQAgAwEiAAIRAQMRAf/EAIUAAAMAAwAAAAAAAAAAAAAAAAADBQIEBgEBAQEAAAAAAAAAAAAAAAAAAAECEAACAgECBwEAAAAAAAAAAAABAgADBBMFEBEhMUESFBURAAEDAgUBCQAAAAAAAAAAAAEAEQIhEkFhcSIDUbHRMkJSksITIxIBAAAAAAAAAAAAAAAAAAAAIP/aAAwDAQACEQMRAAAAr3Obwxvqp0h5NaEO3Ar/2gAIAQIAAQUAWEzxP//aAAgBAwABBQAwDj//2gAIAQEAAQUAwLFXIW2rkrK0PXd1XGUlHrsqa6winMVh2q+r1xv0dRDuOp//2gAIAQICBj8AH//aAAgBAwIGPwAf/9oACAEBAQY/AImRADSqdEN8fcFtIOhdSyHxQfkMyR5WZcnMJAiYtjEnw5uzJoy3Cmr9LVcC08d1UXR+m63H0r8rL87H70bxxGWNZDsBX//Z); /*bg-pre2.jpg*/
+min-height: 100vh;
+}
+
+.section1-enhanced {
+  background-image: url(img/bg-enhanced2.jpg);
+}
+
+@supports (background-image: filter(url('i.jpg'), blur(1px))) {
+  .post-header {
+    transform: translateZ(0);
+  }
+  .post-header-enhanced {
+    animation: sharpen .5s both;
+  }
+  @keyframes sharpen {
+    from {
+      background-image: filter(url(img/bg-enhanced2.jpg), blur(20px));
+    }
+    to {
+      background-image: filter(url(img/bg-enhanced2.jpg), blur(0px));
+    }
+  }
+}</style>
+
   </head>
   <body>
-		<div class="section1 row">
+
+<div class="reveal" id="Modal1" data-reveal>
+
+  <h4>Are you ready to convert a PSD?</h4>
+  <p>There are three pre-requisites:
+  <ol>
+    <li><h5>The people</h5>
+      <div style="display:none">
+       <p>Two people are required from your team
+      <ol><li>to be on the Kickoff Call,</li>
+        <li>to be available to respond to questions and approve milestones</li>
+        <li>to be on the Demo Call</li>
+      </ol></div>
+      </li>
+    <li><h5>The PSD</h5>
+      <div style="display:none">
+    <p>A Photoshop web page design file with mockups for a mobile version, tablet version, and desktop version, as well as any UX notes or wireframes.</div></li>
+    <li><h5>Pre-approved payment</h5>
+      <div style="display:none">
+    <p>Pre-approved payment, ready to send during the Demo Call.</div></li>
+ </ol>
+ <div class="row">
+   <div class="small-6 columns center">
+    <a href="schedule.html" class="large button">I'm ready to Start</a>
+   </div>
+   <div class="small-6 columns center">
+    <a href="schedule.html#pre-requisites" class="hollow button">Tell me more about these "pre-requisites"</a>
+   </div>
+ </div>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+      <div class="section1 row">
       <div class="top-bar">
-          <img src="img/logo.png" style="max-height:2.62em; width:auto;">
-        <div class="top-bar-links">
-          <a href="#pricing" class="pricing hide-for-small-only">Pricing</a>
-          <a href="#" class="client-login">Client Login</a>
+          <img src="img/logo.png" style="max-height:2rem; width:auto;" alt="PSD 2 RWD beta logo">
+        <div class="top-bar-links" data-magellan>
+          <a href="#pricing" class="top-link pricing hide-for-small-only pricing-link">Pricing</a>
+          <a href="#client-login" class="top-link client-login hide-for-small-only">Client Login</a>
         </div>
       </div>
         <div class="column align-middle center ">
-          <h1 class="opening-headline">PSD to RWD in one week</h1>
-          <h4 class="convert-to-code-tagline">Convert your Photoshop design into <a href='#the-code'>code</a> for a responsive webpage.</h4>
+          <h2 class="opening-headline">PSD to RWD in one week</h2>
+          <h5 class="convert-to-code-tagline" data-magellan>Convert your Photoshop design into <a href='#the-code-title' class="top-link">code</a> for a responsive webpage.</h5>
+
           <div class="bg-gradient"></div>
-          <div>
-            <span class="not-row small-center"><a href="#how-it-works" class="medium button hollow intro">How it works</a></span>
-            <div class="row small-center show-for-small-only"><a href="#pricing" class="medium button hollow intro">Pricing</a></div>
-            <span class="not-row small-center"><a href="#" class="medium button intro">Convert PSD</a></span>
-           </div>
-      </div>
-      <div class="device-spaceholder"></div>
-		</div>
-		<section class="section2">
-			<div>
-          <div class="row">
-
-            <img class="device show-for-small-only" src="img/phone.png">
-            <img class="device show-for-medium-only" src="img/laptop.png">
-            <img class="device show-for-large-only" src="img/cinema-display.png">
-            <div class="large-12 columns">
-              <p class="value">We convert your design into responsive landing page that’s quality tested on all major devices and ready for launch next week.
-              <ul class="features-check"><li>responsive layout</li>
-              <li>responsive images</li>
-              <li>responsive menu</li>
-              <li>device & browser tested, ready to go</li>
-              </ul>
+          <div data-magellan>
+            <span class="not-row small-center intro-button"><a href="#how-it-works" class="medium button hollow intro">How it works</a></span>
+            <span class="row small-center show-for-small-only intro-button"><a href="#pricing" class="medium button hollow intro pricing-link">Pricing</a></span>
+            <span class="not-row small-center intro-button"><a href="#schedule.html" class="medium button intro" data-open="Modal1">Convert my PSD</a></span>
             </div>
-          </div>
-			</div>
 
-		</section>
+      <div class="device-spaceholder row right">
+            <img class="device xshow-for-small-only" src="img/laptop.png" alt="Device">
+      </div>
+      </div>
+    </div>
+
+
+    <section class="section2">
+     <div class="large-12 columns">
+            <div class="row" style="margin-top:4rem;">
+            <h5 class="italic brela" style="margin:.62rem 1rem 2rem;">Here's what we do</h5>
+              <h4 class="value large-9 medium-10 small-12 columns">We convert designs into mobile-responsive web pages.</h4>
+              <p class="clear large-9 medium-10 small-12 columns"><br>We write the code, test it on all major devices, and have it ready for launch next week.
+              <ul class="features-check clear" style="margin-bottom:4rem; list-style-type:none;"><li><img src="img/check.png"> responsive layout</li>
+              <li><img src="img/check.png"> responsive images</li>
+              <li><img src="img/check.png"> responsive menu</li>
+              <li><img src="img/check.png"> device & browser tested, ready to go</li>
+              </ul>
+              </div>
+            </div>
+    </section> <!-- section2 -->
+
     <section class="section-responsive-features">
+<div class="row center">
+  <img src="img/devices.png" alt="Your design responds to all devices." style="position:relative; top: -3rem; margin-top: 1rem;">
+</div>
       <div class="row">
-      <img src="img/devices.png" style="" class="large-3 medium-3 small-9 columns devices">
         <div class="large-6 medium-6 columns feature">
-          <img src="img/expand-icon.png" class="feature-icon">
-          <h4>Optimized image and video sizes</h4>
-          <p>One of the biggest problems with bloated web pages and slow page loading on responsive websites are images. Especially with the growing number of “Retina Devices,” people want higher resolution images for their sites and it’s important that pages don’t become cluttered with 1mb image files.
-          <!-- NOTE: This copy is for placement only and not meant for final production -->
-        </div>
+          <div class="center">
+            <img src="img/menu-icon.jpg" class="feature-icon" alt="Mobile menus" style="margin-top: 4px; margin-bottom: 5px;">
+            <h4>Responsive navigation menus</h4>
+          </div>
+          <p>Navigation patterns in responsive web design can be tricky to tackle. Central to a solid user experience is a well-structured, simple navigation system. It doesn’t matter how good your website is if users can’t find their way around it. Do you know your responsive menu style? Toggle down, top links, fullscreen overlay, flyout, any of these on <a href="http://bradfrost.github.io/this-is-responsive/patterns.html#navigation">the full list of responsive navigation options</a>. 
+          <!-- NOTE: This copy is for placement only and not meant for final production --></div>
+
         <div class="large-6 medium-6 columns feature">
-          <img src="img/layout-icon.jpg" class="feature-icon">
-          <h4>Fluid responsive columns</h4>
+          <div class="center">
+            <img src="img/layout-icon.jpg" class="feature-icon" alt="Responsive layout">
+           <h4>Fluid responsive columns</h4>
+          </div>
           <p>Fluid grids flow naturally within the dimensions of its parent container, limited adjustments will be needed for various screen sizes and devices. Because it uses percentages, your fluid columns will fit into any width.
           <!-- NOTE: This copy is for placement only and not meant for final production --></p>
         </div>
-        <div class="large-6 medium-6 columns clear feature">
-          <img src="img/text-icon.jpg" class="feature-icon">
-          <h4>Responsive text sizes and font margins</h4>
+       </div>
+      <div class="row clear">
+        <div class="large-6 medium-6 columns feature">
+          <div class="center">
+            <img src="img/text-icon.jpg" class="feature-icon" alt="Optimize text">
+            <h4>Responsive typography and spacing</h4>
+          </div>
           <p>Typography is one of the most important aspects of responsive web design, and optimizing your fonts for mobile devices is an absolute necessity if you want your content to be palatable across all screen sizes. We optimize your typography for every viewport.
           <!-- NOTE: This copy is for placement only and not meant for final production --></p>
         </div>
+
         <div class="large-6 medium-6 columns feature">
-          <img src="img/menu-icon.jpg" class="feature-icon">
-          <h4>Responsive navigation menus</h4>
-          <p>Navigation patterns in responsive web design can be tricky to tackle. Central to a solid user experience is a well-structured, simple navigation system. It doesn’t matter how good your website is if users can’t find their way around it.
-          <!-- NOTE: This copy is for placement only and not meant for final production --></p>
+          <div class="center">
+            <img src="img/expand-icon.png" class="feature-icon" alt="Expanding media">
+          <h4>Optimized image and video sizes</h4>
+          </div>
+          <p>One of the biggest problems with bloated web pages and slow page loading on responsive websites are images. Especially with the growing number of “Retina Devices,” people want higher resolution images for their sites and it’s important that pages don’t become cluttered with 1mb image files.
+          <!-- NOTE: This copy is for placement only and not meant for final production -->
         </div>
+        </div>
+
+    </section> <!-- section-responsive-features -->
+
+    <section class="section-the-code clear" id="the-code" data-magellan-target="the-code" style="padding-bottom:14rem;">
+    <div class="row">
+     <div class="large-7 small-centered columns">
+       <h2 id="the-code-title">The Code</h2>
+       <h4>Delivered ready to ship</h4>
+          <p style="margin-bottom: 0; margin-top:2rem">Before delivery, The Code... 
+            <ul style="margin-top:0; padding-top:0 !important; list-style-type:none;">
+              <li style="margin-top:0; padding-top:0"><input type="checkbox" id="ossm1" name="ossm1" checked="checked" style="margin-right:.62rem;">is peer reviewed as well as tested on all major browsers and devices.<!--  <a data-toggle="code-dropdown000" style="font-size:.9rem">+ more ≫</a> <span class="dropdown-pane" id="code-dropdown000" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+              <li><input type="checkbox" id="ossm2" name="ossm2" checked="checked" style="margin-right:.62rem;">is delivered demo-ready and production-ready.<!--  <a data-toggle="code-dropdown001" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown001" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+              <li><input type="checkbox" id="ossm3" name="ossm3" checked="checked" style="margin-right:.62rem;">has comments and implementation instructions.<!--  <a data-toggle="code-dropdown002" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown002" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+              <li><input type="checkbox" id="ossm4" name="ossm4" checked="checked" style="margin-right:.62rem;">uses Google style guide for HTML, CSS, and JavaScript. <!-- <a data-toggle="code-dropdown003" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown003" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+              <li><input type="checkbox" id="ossm5" name="ossm5" checked="checked" style="margin-right:.62rem;">repository Git commits can be viewed. <a data-toggle="code-dropdown004" style="font-size:.9rem">+ more</a> <span class="dropdown-pane" id="code-dropdown004" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">Check out the repository commits for this website, <a href="https://github.com/cleverbaker/psd2rwd/tree/Bg-images-and-color">for example</a>.</span></li>
+              <li><input type="checkbox" id="ossm6" name="ossm6" checked="checked" style="margin-right:.62rem;">uses progressive enhancement practices.<!--  <a data-toggle="code-dropdown005" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown005" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+              <li><input type="checkbox" id="ossm7" name="ossm7" checked="checked" style="margin-right:.62rem;">is Future Friendly. <a data-toggle="code-dropdown01" style="font-size:.9rem">more +</a> <span class="dropdown-pane" id="code-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About Future Friendly <a href="http://futurefriendlyweb.com/thinking.html">a link</a></span></li>
+              <li><input type="checkbox" id="ossm8" name="ossm8" checked="checked" style="margin-right:.62rem;" style="padding-right:2rem;">is SEO friendly. <a data-toggle="code-dropdown02" style="font-size:.9rem">more</a> <span class="dropdown-pane" id="code-dropdown02" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">Our code adheres to best SEO practices, including heirarchical header tags, meta-description tags, and alt tags. Also, <a href="https://googlewebmastercentral.blogspot.com/2015/04/rolling-out-mobile-friendly-update.html">Google rewards mobile-friendly websites</a></span></li>
+              <li><input type="checkbox" id="ossm9" name="ossm9" checked="checked" style="margin-right:.62rem;">adheres to best security practices. <!-- <a data-toggle="code-dropdown006" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown006" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
+            </ul>
+            </div>
+          </div>
+    </section>
+
+    <section class="section-how-it-works" data-magellan-target="how-it-works">
+    <div class="row center">
+      <img src="img/cinema-display-with-code.png" alt="The code is presentable and production-ready" style="margin-top:-14rem">
       </div>
-    </section>
-    <section class="section-the-code" id="the-code">
-    <h1>The Code</h1>
-    <h2>Delivered ready to ship</h2>
+      <div class="row">
+      <div class="center">
+        <h2 id="how-it-works">How it Works</h2>
+            <p><img src="img/The-Sprint-v2.png" alt="The 7-Day Sprint starts with the Kickoff Call and ends with the Demo Call.">
+      </div>
+     <br>
+     <div class="large-8 medium-10 small-12 columns">
+        <p style="margin-left:2.5rem"  data-magellan>1.  <a href="#before-the-sprint">Before the Sprint</a>
+        <br>2.  <a href="#the-sprint">The Sprint</a>
+        <br>3.  <a href="#after-the-sprint">After the Sprint</a>
+        <p class="quote">In product development, a sprint is a set period of time during which specific work has to be completed and made ready for review.<a href="http://searchsoftwarequality.techtarget.com/definition/Scrum-sprint" class="reference-link">*</a><br><br>
+        For each PSD conversion, we do a 7-day sprint (including the weekend).<br><br>Each 7-day sprint starts with a <a href="#">Kickoff Call</a> and ends with a <a href="#">Demo Call</a>.<br><br>
+        The Kickoff Call and the Demo Call are very important, as discussed below.<br><br>
+        The Code is delivered first thing on Tuesday morning, payment is made later that day on the Demo Call.<br><br>
+        The Code is delivered with all the image assets and code dependencies along with a brief write-up summarizing the code, our chosen approach, and any implementation notes.<br><br>
+        <br><br>Payment is due in full at the end of the sprint.
+        <br><br>We will fix any bugs, if any are discovered after the sprint.
+      <p>We are specific about our process&mdash;that is how we deliver such high quality code at a fixed rate. 
+    </div>
+<hr>
+     <div class="large-8 medium-10 small-12 columns">
+    <h5 class="stage-title" id="before-the-sprint" data-magellan-target="before-the-sprint">Before the Sprint</h5>
+    <p><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Signed NDA
+    <br><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Schedule a Kickoff Call<span class="small button" style="margin-left:1.62rem; margin-bottom: 0;" data-open="Modal1">I am ready to Schedule a Kickoff Call</span>
+    <br><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Your layered PSD mockup emailed/uploaded
+    <br><input type="checkbox" id="ossmx1" name="ossmx1" style="margin-right:.62rem;">Wireframes or design document included for UX interaction (e.g. respnonsive nav movement, hover states, modal animations, etc.)
 
-   
-<p>
-<ul>
-<li>Code is peer reviewed and tested before delivery (browser and device tested)</li>
-<li>Code has comments and implementation instructions</li>
-<li>demo ready, production ready</li>
-<li>google style guide for HTML, CSS, and JavaScript</li>
-<li>view git commits during production</li>
-<li>optimized progressive enhancement</li>
-<li>future friendly</li>
-<li>SEO friendly</li>
-<li>adheres to best security practices</li>
-</ul>
+    <p>Having this thought out before the Kickoff Call helps us return a slick responsive landing page so quickly.
 
- <img src="img/cinema-display-with-code.png" id="code">
-
-    </section>
-    <section class="section-how-it-works">
-    <h1 id="how-it-works">How it Works</h1>
-    <p class="quote">In product development, a sprint is a set period of time during which specific work has to be completed and made ready for review.<a href="http://searchsoftwarequality.techtarget.com/definition/Scrum-sprint" class="reference-link">*</a><br>
-    <p>
-    At PSD 2 RWD, we do 7-day sprints (including the weekend) for each Photoshop to responsive web page conversion.<br>These 7-day sprints are book-ended by the Kickoff Call and the Demo Call.<br>
-    The Kickoff Call and the Demo Call are very important, as discussed below.<br>
-    Code is delivered first, and then payment is made on the last day of the sprint.<br>
-    Code is delivered with all the image assets and code dependencies with a brief write-up with instructions and comments.<br>
-    <br>Payment is due in full at the end of the sprint.
-    <br>If any bugs come up down the road, we'll take care of them.
-    <br>
-    <p>1.  Before the Sprint
-    <br>2.  The Sprint
-    <br>3.  After the Sprint
-    <h5 class="stage-title">Before the Sprint</h5>
-    <p>Signed NDA
-    <br>Schedule a Kickoff Call
-    <br>Your layered PSD mockup emailed/uploaded
-    <br>Menus instructions (wireframe or specs) included
-    <br>Layouts (wireframes or mockups) included
-    <br>PSD 2 RWD responds with any questions before Kickoff Call
-
-    <p>Having this thought out helps us return a slick responsive site so quickly.
-
+</div>
     <hr>
-    <h5 class="stage-title">The Sprint</h5>
+
+<div class="large-8 medium-10 small-12 columns">
+    <h5 class="stage-title" id="the-sprint" data-magellan-target="the-sprint">The Sprint</h5>
 <ol>
   <li>Kickoff Call<br>
-  <span class="sub-line">We review your design together on the Kickoff Call</span></li>
-  <li>Updates along the way<br>
-  <span class="sub-line">See code and project updates along  the way on Basecamp and GitHub</span></li>
+  <span class="sub-line">We review your design together on the Kickoff Call.</span></li>
+  <li>Development: Updates along the way<br>
+  <span class="sub-line">See code and project updates along  the way on Basecamp and a private GitHub repository.</span></li>
   <li>Demo Call<br>
-  <span class="sub-line">We review the responsive webpage together and payment is made on the Demo Call</span></li>
+  <span class="sub-line">We review the responsive webpage together and payment is made on the Demo Call.</span></li>
 </ol>
 
-<p><span class="italic">Kickoff Call</span>
+<br>
+<p><span class="italic underline">Kickoff Call</span>
 <ul>
-  <li>roughly 20 minutes</li>
-  <li>review PSD together</li>
-  <li>discuss mobile/desktop responsiveness</li>
-  <li>discuss colors and fonts</li>
-  <li>discuss menu</li>
-  <li>discuss pop-up layovers, rollovers, and forms</li>
-  <li>technical and communication contacts on call (2 people on each side, 4+ people on Kickoff Call)</li>
-  <li>all technical points discussed are included in the deliverables in the Work Agreement sent immediately after the call</li>
+  <li>Roughly 20 minutes</li>
+  <li>Review PSD together</li>
+  <li>Discuss mobile/desktop responsiveness</li>
+  <li>Discuss colors and fonts</li>
+  <li>Discuss menu</li>
+  <li>Discuss pop-up layovers, rollovers, forms, and JavaScript interaction</li>
+  <li>Technical and communication contacts on call (2 people on each side, 4+ people on Kickoff Call)</li>
+  <li>All technical points discussed are listed as deliverables in the Work Agreement sent immediately following the call</li>
+  <li>Payment for project is pre-approved and ready to be sent on the Demo Call next week</li>
   </ul>
 
-  <p><span class="italic">Development</span>
+<br>
+  <p><span class="italic underline">Development</span>
   <ul>
-    <li>Basecamp updates</li>
-    <li>Github updates</li>
-    <li>Code Delivery by 9:00 A.M. next Tuesday morning (no matter what)</li>
+    <li>Basecamp updates <a style="font-size:.9rem;" data-toggle="dev-dropdown01">more</a> <span class="dropdown-pane" id="dev-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Basecamp updates and process</span></li> 
+    <li>GitHub updates <a style="font-size:.9rem;"  data-toggle="dev-dropdown02">more</a> <span class="dropdown-pane" id="dev-dropdown02" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Git commit updates and process</span></li>
+    <li>Code Delivery by 9:00 A.M. next Tuesday morning (no matter what) <a style="font-size:.9rem;"  data-toggle="dev-dropdown03">more</a> <span class="dropdown-pane" id="dev-dropdown03" data-dropdown data-options="closeOnClick: true; autoFocus: false;">re:Code delivery @ Tue 0900</span></li>
   </ul>
-
-  <p><span class="italic">Demo Call</span>
+<br>
+  <p><span class="italic underline">Demo Call</span>
   <ul>
-  <li>Demo the webpage</li>
+  <li>Demo the responsive landing page</li>
   <li>Review the code</li>
   <li>Review deliverables</li>
   <li>Questions & Answers</li>
   <li>Quality Assurance review</li>
-  <li>Deliverables acceptance sign-off</li>
+  <li>Deliverables  sign-off</li>
   <li>Payment</li>
   <li>IMPORTANT: Payment is made while we are on the call.
-  <li>Minor fixes are sent by the end of the day or the next day.<br>
-anymore changes needs a change order with a deadline as the following Monday.</li>
+  <li>Minor fixes are sent by the end of the day or the next day,<br>
+Any further changes need a change order with a deadline of the following Monday.</li>
 <li>You don't pay until you have the code! (But please pay right after.)</li>
   </ul>
-
-<hr>
-    <h5 class="stage-title">After The Sprint</h5>
-
-<p>What are the next steps you are going to take after your beautiful design is now a slick responsive site? You'll probably use it as a landing page or implement it as a theme in your content management system.
-<p>But first, you'll probably try it out yourself, play with it by resizing the browser window, testing it on your phone.. then you'll show it off to your boss or client, and celebrate the milestone victory.
-<p>We assume you have a technical person on your team that we're handing the code off to and that's who's going to launch the landing page or implementing the code into your CMS.
-    </section>
-    <section class="section-pricing">
-    <h1 id="pricing">Pricing</h1>
-    <p>PSD conversions are priced at $695, $925, or $1195, depending on complexity.
-    <div class="row">
-      <div class="large-4 columns circle"><p>Small<br>$695</div>
-      <div class="large-4 columns circle"><p>Medium<br>$925</div>
-      <div class="large-4 columns circle"><p>Large<br>$1195</div>
-  <div class="row" style="clear:both">
-      <p>Factors in complexity:
-      <ul>
-        <li>Size</li>
-        <li>Number of elements</li>
-<li>Challenges in developing the desktop to mobile transition</li>
-<li>Forms</li>
-<li>Menu complexity</li>
-<li>Pop-up modals and other interactive elements</li>
-</ul>
- 
- 
-<p>Pricing is finalized on our Kickoff Call.
- 
-<p>Ready? <a href="#" class="medium button schedule-call">Schedule a Kickoff Call</a>
-
-<p><a href="#" data-toggle="dropdown2">Want bulk pricing?</a>
-<div id="dropdown2" data-toggler data-animate="hinge-in-from-top">Up to 3 PSD conversions per month, no matter what size.
-<span class="strikethrough">$2700</span> $2100 Launch Promo <!-- NOTE:add countdown here --></div>
 </div>
+<hr>
 
+<div class="large-8 medium-10 small-12 columns end">
+    <h5 class="stage-title" id="after-the-sprint" data-magellan-target="after-the-sprint">After The Sprint</h5>
+
+<p>What are the next steps that you are going to take after your beautiful design is now a slick responsive webpage? You will probably use the code as a promotional landing page or implement it as a theme in your content management system.
+<p>But first, you will probably try it out yourself by resizing the browser window and testing it on your phone.. Then you will show it off to your boss or client, and celebrate the milestone victory.
+<p>We assume you have a technical person on your team that we are handing the code off to and that is who is going to launch the landing page or implementing the code into your CMS.
+</div>
     </section>
-        <section class="section-pricing">
-        </section>
-    <footer>
+    <section class="section-pricing"  data-magellan-target="pricing">
+    <div class="row">
+      <h2 id="pricing">Pricing</h2>
+      <p>PSD conversions are priced at $695, $925, or $1195, depending on complexity.
+    </div>
+    <div class="row center">
+      <div class="large-4 medium-4 columns circle small-centered large-uncentered center"><p>Small<br>$695</div>
+      <div class="large-4 medium-4 columns circle small-centered large-uncentered center"><p>Medium<br>$925</div>
+      <div class="large-4 medium-4 columns end circle small-centered large-uncentered center float-none"><p>Large<br>$1195</div>
+    </div>
+    <div class="row">
+      <div class="callout text-left small-11 medium-11 large-8 small-centered columns" style="inline-block">
+       <p>Factors in complexity:
+       <ul>
+         <li>More than five sections per PSD</li>
+          <li>More than 12 elements per section</li>
+         <li>Complex responsive behavior</li>
+         <li>Forms</li>
+         <li>Pop-up modals and other interactive elements</li>
+         <li>JavaScript interaction</li>
+         <li>Missing wireframes or missing design document (adds to complexity)</li>
+      </ul>
+      <p>For estimating purposes:<br>
+      &nbsp;&nbsp;A Small may have one of the listed complexity factors.<br>
+      &nbsp;&nbsp;A Medium may have three of the listed complexity factors.<br>
+      &nbsp;&nbsp;A Large may have five or more of the listed complexity factors.<br>
+
+      </div>
+      <div class="medium-11 large-10 columns">
+      <p>Pricing is finalized on our Kickoff Call. 
+ 
+      <p>Ready? <a class="medium button schedule-call" data-open="Modal1">Schedule a Kickoff Call</a>
+
+      <p><button class="small button" type="button" data-toggle="dropdown1">Want bulk pricing?</button>
+     
+     <div class="dropdown-pane" id="dropdown1" data-dropdown data-options="closeOnClick: true; autoFocus: false;">
+      <div id="dropdown2">Get a <a href="#priority-membership">Priority Membership</a> to recieve up to 3 PSD conversions per month, no matter what size (Small, Medium, or Large).
+      <span class="strikethrough">$2700</span> <span class="strikethrough">$2100 Launch Promo <!-- NOTE:add countdown here --></span> <a href="membership.html">$1500 Desperado Edition</a></div>
+      </div>
+      </div>
+      
+
+  </div>
+  </div>
+  </section>
+
+  <footer>
     <div class="row">
       <div class="medium-8 columns">
         <p>PSD 2 RWD is based out of the heart of Silicon Valley in Mountain View, California.
         <br>We have technical contacts available in 10 US cities for in person meetings.
         <p>(650) 555 - 1212
       </div>
-      <div class="medium-3 columns">
-        <p>PSD 2 RWD Technical Contacts available in<br>
+      <div class="small-4 columns">
+        <p class="">PSD 2 RWD Technical Contacts available in
+        <div class="row">
+          <div class="small-6 columns">
         San Diego<br>
         Los Angeles<br>
         San Francisco<br>
         Portland<br>
         Seattle<br>
+         </div>
+         <div class="small-6 columns end">
+        <p>
         Austin<br>
         Boston<br>
         NYC<br>
         Washington DC<br>
         Chicago<br>
+        </div>
       </div>
+    </div>
 
-      <div class="medium-3 columns"><img src="img/castro-st.jpg" alt="Castro Street, Downtown Mountain View">
-      </div>
-      <div class="medium-3 columns"><img src="img/svalley.jpg" alt="Sillicon Valley Central">
-      </div>
-      <div class="medium-3 columns"><img src="img/usa.jpg" alt="USA">
-      </div>
     </div>
 
     <div class="row">
     </div>
+    <div class="row center">
+    <img src="img/map-us.jpg" alt="PSD 2 RWD technical contacts are available for in-person meetings in 10 US cities." style="width:100%; height:auto; opacity:.8">
+
+<!--   <section class="newsletter-entry"> -->
+    <div class="row medium-10 small-12 columns small-centered">
+      <p class="">Want to hear about future news and PSD 2 RWD updates?
+
+    <div class="small-8 medium-8 columns"><input id="fieldEmail" name="home-email" placeholder="youremail@domain.com"></div>
+    <div class="small-4 medium-4 columns hollow small button">Surprise me</div>
+    </div>
+<!--   </section> -->
+    </div>
+
+
+
+
     <div class="row">
-      <div class="small-6 columns"><a href="#">About Us</a><br>
+      <div class="small-6 columns"><a href="about.html">About Us</a><br>
         <a href="faq.html">FAQ</a><br>
         <a href="#">Privacy Policy</a><br>
         <a href="#">Contact Us</a><br>
@@ -248,12 +407,10 @@ anymore changes needs a change order with a deadline as the following Monday.</l
     </footer>
 
 
-    
+    <script src='js/jquery-psd2rwd.min.js'></script>
+<script src='js/foundation-6a.min.js'></script>
 
-
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
+  

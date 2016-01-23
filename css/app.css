@@ -1,282 +1,218 @@
-@charset 'utf-8';
 
-@import 'settings';
-@import 'foundation';
-
-@include foundation-everything;
-
-@mixin flex-grid-row(
-  $behavior: null,
-  $width: $grid-row-width,
-  $columns: null,
-  $base: true
-) {
-  $behavior: -zf-get-options($behavior, nest collapse);
-  $margin: auto;
-
-  @if map-get($behavior, nest) {
-    $margin: -$grid-column-gutter;
-  }
-  @else {
-    max-width: $width;
-  }
-
-  @if $base {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  margin-left: $margin;
-  margin-right: $margin;
-
-  @if $columns != null {
-    @include grid-context($columns, $root) {
-      @content;
-    }
-  }
-}
-@function flex-grid-column($columns: null) {
-  $flex: 1 1 0px;
-  @if $columns == shrink {
-    $flex: 0 0 auto;
-  }
-  @else if $columns != null {
-    $flex: 0 0 grid-column($columns);
-  }
-  @return $flex;
-}
-@mixin flex-grid-column(
-  $columns: null,
-  $gutter: $grid-column-gutter
-) {
-  flex: flex-grid-column($columns);
-  padding-left: $gutter;
-  padding-right: $gutter;
-
-  // max-width fixes IE 10/11 not respecting the flex-basis property
-  @if $columns != null and $columns != shrink {
-    max-width: grid-column($columns);
-  }
-}
-
-@mixin foundation-flex-grid {
-  // Row
-  .flex-row {
-    @include flex-grid-row;
-
-    // Nesting behavior
-    & &,
-    .flex-column-row & {
-      @include flex-grid-row(nest, $base: false);
-    }
-  }
-
-  // Column
-  %flex-column {
-    @include flex-grid-column;
-  }
-
-  .flex-column,
-  .flex-columns {
-    @extend %flex-column;
-  }
-
-  // Sizing (percentage)
-  @each $size in $breakpoint-classes {
-    @include breakpoint($size) {
-      @for $i from 1 through $grid-column-count {
-        .flex-#{$size}-#{$i} {
-          flex: flex-grid-column($i);
-          max-width: grid-column($i);
-        }
-      }
-    }
-  }
-
-  // Sizing (expand)
-  @each $size in $breakpoint-classes {
-    @if $size != small {
-      @include breakpoint($size) {
-        .flex-#{$size}-expand {
-          flex: flex-grid-column();
-        }
-      }
-    }
-  }
-
-  // Sizing (shrink)
-  .flex-shrink {
-    flex: flex-grid-column(shrink);
-  }
-
-  // Auto-stacking/unstacking
-  @each $size in $breakpoint-classes {
-    @if $size != small {
-      .flex-row.#{$size}-unstack {
-        .flex-column {
-          flex: flex-grid-column(100%);
-
-          @include breakpoint($size) {
-            flex: flex-grid-column();
-          }
-        }
-      }
-    }
-  }
-
-  // Source ordering
-  @each $size in $breakpoint-classes {
-    @include breakpoint($size) {
-      @for $i from 1 through 6 {
-        .flex-#{$size}-order-#{$i} {
-          order: $i;
-        }
-      }
-    }
-  }
-
-  // Horizontal alignment using justify-content
-  @each $hdir, $prop in (
-    'right': flex-end,
-    'center': center,
-    'justify': space-between,
-    'spaced': space-around,
-  ) {
-    .flex-row.flex-align-#{$hdir} {
-      justify-content: $prop;
-    }
-  }
-
-  // Horizontal alignment using align-items and align-self
-  @each $vdir, $prop in (
-    'top': flex-start,
-    'bottom': flex-end,
-    'middle': center,
-    'stretch': stretch,
-  ) {
-    .flex-row.flex-align-#{$vdir} {
-      align-items: $prop;
-    }
-
-    .flex-column.flex-align-#{$vdir} {
-      align-self: $prop;
-    }
-  }
-}
-@include foundation-flex-grid;*/
 
 @font-face {
   font-family: 'Muller';
   src: url('Muller-ExtraBold.otf');
 }
 
-section {
-  padding: 0 2rem;
+@font-face {
+  font-family: 'Brela';
+  src: url('brelarefular.otf');
 }
 
+
+html,body {
+    margin:0;
+    padding:0;
+    height:100%; /* needed for container min-height */
+  }
+
+h1,h2,h3,h4,h5,h6{font-family: 'Muller', sans-serif;}
+
+body {
+ /* font-family: 'Brela', serif;*/
+ color: #0b0b0b;
+}
+
+.brela {
+  font-family: 'Brela', serif;
+}
+
+
+section { 
+  width: 100%;
+  padding: .625rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 96%;
+}
+
+.button.hollow {
+  background-color: rgba(254,254,254,0.8);
+}
 .section1 {
 
   /* Location of the image */
-  background-image: url(../img/green-gradient.png), url(../img/bg.jpg);
+ /*  background-image: url(../img/green-gradient.png), url(../img/bg.jpg); */
+background-image: url(../img/bg-enhanced2.jpg);
+
 
  /* Background image is centered vertically and horizontally at all times */
-  background-position: center bottom, center center;
+/*  background-position: center bottom, center center;*/
+  background-position: center center;
 
   /*Background image doesn't tile */
-  background-repeat: repeat-x, no-repeat;
+/*  background-repeat: repeat-x, no-repeat;*/
 
-  /* ckground image is fixed in the viewport so that it doesn't move when
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
      th content's height is greater than the image's height */
   /*background-attachment: fixed;*/
 
   /* Thiis what makes the background image rescale based
      on the container's size */
-  background-size: auto, cover;
+/*  background-size: auto, cover;*/
+  background-size: cover;
 
   background-color: #fff;
 
   /*position: absolute; top: 0; bottom: 0; left: 0; right: 0;*/
 
-  height: 100vh;
+  min-height: 100vh;
 
   width: 100%;
   max-width: 100%;
 
-
   }
 
-.section2 {
- color: #000;
- background-image: url(../img/green.jpg);
- background-repeat: repeat;
-}
 
 .top-bar {
   height: 67px;
   background: transparent;
   overflow: auto;
+  padding: .25rem .5rem;
 }
 
 .top-bar-links {
   position: absolute;
   right: 2rem;
-  top: 1rem;
+  top: 1.2rem;
+  font-size: 0.9rem
 }
 
 .top-bar .pricing {
   margin-right: 2rem;
 }
 
-.client-login , .top-bar .pricing {
-  color: #9a9a9a;
-  text-decoration: none;
-  font-size: .9rem;
-}
-.client-login:hover, .top-bar .pricing:hover {
-  text-decoration: underline;
-  color: #1585cf;
+
+
+/*
+.hide-for-small-only {
+  
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Muller', 'Open Sans';
+*/
+ol, ul {
+  padding: 1rem !important;
+  margin-left: 1rem;
 }
 
-.intro {
+.pricing {}
+
+.client-login {}
+
+
+.center {
+  text-align: center;
+} 
+
+.right {
+  text-align: right !important; 
+}
+
+.feature .center {
+  text-align: left !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.italic {
+  font-style: italic;
+  font-family: 'Brela', serif;
+}
+
+.italic.underline {
+  font-family: inherit;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.underline {
+  border-bottom: 1px solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+/*  font-family: 'Alegreya Sans','Georgia', sans-serif;
+  font-weight: 800;*/
+}
+
+.float-none {
+  float: none !important;
+}
+
+.intro-button {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.device {
+ margin-top: 3rem;
+  margin-right: 4%;
   position: relative;
+  top: .62rem;
+}
+
+.code-link{     margin: 0 .05rem; color: #0b0b0b !important; font-size: 1.25rem}
+
+.feature {
+  margin-top:0.5rem;
+  margin-bottom:1rem;
+}
+
+.feature-icon {
+  max-height: 76px;
+  width: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.feature h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+
+}
+
+.circle {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  background: #ddddef;
+  display: inline-block;
+}
+
+.circle p {
+  margin-top: 36%;
+  font-size: 1.85rem;
 }
 
 .opening-headline {
-  margin: 4rem auto 0.5rem;
-  text-align: center;
-  color: #fff;
-  font-size: 3.5rem;
- }
+  margin-top: 3.14rem;
+}
 
 .convert-to-code-tagline {
-  text-align: center;
-  color: #fff;
-      margin: 1rem auto 2rem;
-}
-
-
-.convert-to-code-tagline a {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.value {
-      font-weight: normal;
-    font-style: normal;
-    color: inherit;
-    text-rendering: optimizeLegibility;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-    font-size: 1.125rem;
-}
-
-.section-responsive-features {
-  
+  margin-top: 1.62rem;
+  margin-bottom: 2rem;
 }
 
 .section-the-code {
@@ -285,188 +221,121 @@ h1, h2, h3, h4 {
   
 }
 
-section {
-  position: relative;
-}
-
-.devices {
-  position: absolute;
-    top: -8.75rem;
-    left: 27rem;
-}
-
-#code {
-    position: relative;
-    right: -33%;
-    top: 2em;
-    max-width: 65%;
-    height: auto;
-}
-
-.feature {
-  padding: 1.9375rem 2.9375rem 0.9375rem
-}
-
-.device-spaceholder {
-  min-height: 10em;
-}
-
-.clear {
-  clear: both;
-}
-
-.stage-title {
-  text-decoration: underline;
-  font-weight: normal;
+#how-it-works {
+  margin-top: 3rem;
 }
 
 .section-pricing {
-  /* Generated with http://gradient.quasi.ink */
- /* background-size: cover;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAABqklEQVQ4T32U4U7DMAyEbSduO36PIYEQCJ5lGwxeYghtCHj/nzM6O8myIa1StaZNvtz5nPFmf2MiRCklEhGSgf05D4lUlSTHmPAtEZGJz4t3TMxMlOIdbn7dLRrQoR0w59yAjG+JiKlsjMVJHGgSmzpw/Tk3DOJmSqMQQEnj91xhcwJbzA4BsClcfVxbyuyLHTSGfVjGmFOMq+UeyFB0rnC5nRsWol4Ono419MU5dj8Cu3pVy9xZXm4XlrM40FXOrCk8B7IYSbF3EkoJxGt4DtSrsFhrCMu9QoTa6lUUuvqa8mp3a1mpAWaThkIVQo2QrHG0BxSeAmNzc+VCuBhARauUVCuwpgsIgG6nAAEHqKlHO2EnANf7O1Mk6qkKTSNaJZ591zrZa+e97It9g1IOKGzAl697G8Zjm4xTgADknIjZnOIAtn/AaJsOuPl+MNVMOqEPhYax2GlHrkz2AIwybBWFVEAA1ovffh4b0MOYSttAoZ9RHN8IBc8V6BYL8MCHHvhkqlIUZgf64df4A6h2quVLQDMjfv99NlXUMHurXAJC0UAlzaIQ0nqFf8SSUPAGw4s9AAAAAElFTkSuQmCC");
-*/
-}
-
-.italic {
-  font-style: italic !important;
-}
-
-.underline {
-  text-decoration: underline !important;
-}
-
-.strikethrough {
-  text-decoration: line-through !important;
+  background-color: #f6fee4;
 }
 
 
-.circle {
-    -moz-border-radius: 16em;
-    -webkit-border-radius: 16em;
-    border-radius: 16em;
-    background-color: #ccc;
-    border-color: #ddd;
-    height: 16em;
-    width: 16em;
-    text-align: center;
-    vertical-align: middle;
+#the-code-title {
+  margin-top: 10rem;
 }
 
-.circle p {
-  vertical-align: middle;
-  margin-top: 33%;
-  top: -50%;
-  font-size: 2.5rem;
-  line-height: 3.3rem;
-}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .circle {
 
-  .device {
-    margin-top: -20em;
-    position: relative;
-    left:48%;
+  width: 17rem;
+  height: 17rem;
   }
-.sub-line {
-  font-style: italic;
 }
-
-footer {
-  background-color: #2d2b26;
-  color: #fff;
-}
-
-footer a {
-  color: #fff;
-}
-
-.schedule-call {
-    margin-top: .953rem;
-    vertical-align: middle;
-}
+/* Medium and up */
+@media screen and (min-width: 40em) {
 
 
-@media screen and (min-width: 0em) and (max-width: 39.9375em) {
-  .not-row {
-    display: block;
+  section { 
+    padding: 1.625rem;
+  }
+
+    .circle {
+
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  max-width: 100%
+  }
+
+  .feature {
+    padding-right: 6rem !important;
+    padding-left: 2rem !important; /* TODO: should be for large displays only (too much for medium); */
   }
 
 
-    .large-6 {  
-      padding: 3.5rem;
-    }
-  
+.intro-button {
+  margin-left: 0.62rem !important;
+  margin-right: 0.62rem !important;
+}
 
-   .section1 {
-      background-image: url(../img/green-gradient.png), url(../img/bg.jpg);
-   }
-   .section2 {
-      background-image: url(../img/green.jpg);
-   }
-
-   .device {
-      margin-top: -16em;
-      height: 20rem;
-
-   }
+.device {
+  position: relative;
+  top: 1rem;
+  margin-top: 4rem;
+}
 }
 
 
+@media screen and (min-width: 40em) {
+  h1 {
+      font-size: 4rem;
+  }
+}
 
-@media screen and (min-width: 39.9376em) and (max-width: 63.9375em) {
-    
-    .section1 {
+.faq-page p {
+  max-width: 45rem;
+}
 
-        /* Location of the image */
-        background-image: url(../img/blue-gradient.png), url(../img/bg2.jpg);
+.faq-page .italic {
+  font-size: 1.282rem;
+  font-style: normal;
+  max-width: 55rem !important;
+}
 
-   } 
-   .section2 {
-      background-image: url(../img/blue.jpg);
-   }
+footer { 
+  background-color: #f6f6f6;
+  padding: 6rem 0;
+}
 
- }
+.caption {
+  font-size: .9rem;
+}
 
-@media screen and (min-width: 63.9376em) {
-  .show-for-large-only {
-    display: inline-block !important; }
+.reveal {
+    padding: 1rem 3rem;
+}
 
-    .section1 {
+.button.hollow:hover, .button.hollow:focus {
+      background: rgba(254,254,254,.9);
+      background-color: rgba(254,254,254,.9);
+       }
 
-        /* Location of the image */
-        background-image: url(../img/green-gradient.png), url(../img/bg3.jpg);
+.top-link, .top-link:hover, .top-link:focus {
+      border: 1px solid #ddd;
+      border-color: rgba(254,254,254,0.1);
+      border-bottom: 1px solid #0c4d78;
+      padding: .4em .62em;
+      color: #0c4d78 !important;
+      background-color: rgba(254,254,254,0.2);
+      transition: all 0.5s ease;
 
-   } 
+       }
+    .top-link:hover, .top-link:focus { 
+      border: 1px solid #2199e8;
+      color: #2199e8 !important;
+      background-color: rgba(254,254,254,0.8);
     }
 
 
-
-.xbg-gradient {
-  background-image: url(../img/green-gradient.png);
-  background-repeat: repeat-x;
-  height: 218px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.section-responsive-features a {
+  font-weight: bold;
+}
+.section-the-code a {
+  color: #fbaa41;
+}
+.section-the-code .dropdown-pane a {
+  color: #2199e8;
 }
 
-  .small-center {
-    text-align: center;
-  }
-
-  .intro {
-    text-transform: capitalize;
-    min-width: 8em;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .button.hollow.intro {
-    background-color: #fff;
-  }
-
-
-.features-check {
-  list-style-image: url("../img/check.png")
-}
+#2199e8
