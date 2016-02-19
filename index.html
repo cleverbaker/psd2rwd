@@ -5,15 +5,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSD 2 RWD</title>
+    
 
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel='stylesheet prefetch' href='css/foundation-6a.min.css'>
 
     <link rel="stylesheet" href="css/app.css" />
 
-    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800,700,700italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
+<!--     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800,700,700italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+ -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -53,7 +55,7 @@ min-height: 100vh;
     transform: translateZ(0);
   }
   .post-header-enhanced {
-    animation: sharpen .5s both;
+    animation: sharpen 1s both;
   }
   @keyframes sharpen {
     from {
@@ -65,6 +67,7 @@ min-height: 100vh;
   }
 }</style>
 
+<link rel="stylesheet" href="slick/slick.css" />
   </head>
   <body>
 
@@ -102,12 +105,20 @@ min-height: 100vh;
 </div>
 
       <div class="section1 row">
-      <div class="top-bar">
-          <img src="img/logo.png" style="max-height:2rem; width:auto;" alt="PSD 2 RWD beta logo">
-        <div class="top-bar-links" data-magellan>
-          <a href="#pricing" class="top-link pricing hide-for-small-only pricing-link">Pricing</a>
-          <a href="#client-login" class="top-link client-login hide-for-small-only">Client Login</a>
-        </div>
+<!--         <div class="slick-carousel">
+          <div id="hero0" class="hero">
+          </div>
+          <div id="hero1" class="hero">
+          </div>
+          <div id="hero2" class="hero">
+          </div>
+        </div> -->
+        <div class="top-bar">
+            <img src="img/logo.png" style="max-height:2rem; width:auto;" alt="PSD 2 RWD beta logo">
+          <div class="top-bar-links" data-magellan>
+            <a href="#pricing" class="top-link pricing hide-for-small-only pricing-link">Pricing</a>
+            <a href="#client-login" class="top-link client-login hide-for-small-only">Client Login</a>
+          </div>
       </div>
         <div class="column align-middle center ">
           <h2 class="opening-headline">PSD to RWD in one week</h2>
@@ -121,7 +132,8 @@ min-height: 100vh;
             </div>
 
       <div class="device-spaceholder row right">
-            <img class="device xshow-for-small-only" src="img/laptop.png" alt="Device">
+            <img class="device phone" src="img/phone.png" alt="Device" style="opacity:1">
+            <img class="device laptop" src="img/laptop.png" alt="Device" style="opacity:0">
       </div>
       </div>
     </div>
@@ -199,8 +211,8 @@ min-height: 100vh;
               <li><input type="checkbox" id="ossm4" name="ossm4" checked="checked" style="margin-right:.62rem;">uses Google style guide for HTML, CSS, and JavaScript. <!-- <a data-toggle="code-dropdown003" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown003" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
               <li><input type="checkbox" id="ossm5" name="ossm5" checked="checked" style="margin-right:.62rem;">repository Git commits can be viewed. <a data-toggle="code-dropdown004" style="font-size:.9rem">+ more</a> <span class="dropdown-pane" id="code-dropdown004" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">Check out the repository commits for this website, <a href="https://github.com/cleverbaker/psd2rwd/tree/Bg-images-and-color">for example</a>.</span></li>
               <li><input type="checkbox" id="ossm6" name="ossm6" checked="checked" style="margin-right:.62rem;">uses progressive enhancement practices.<!--  <a data-toggle="code-dropdown005" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown005" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
-              <li><input type="checkbox" id="ossm7" name="ossm7" checked="checked" style="margin-right:.62rem;">is Future Friendly. <a data-toggle="code-dropdown01" style="font-size:.9rem">more +</a> <span class="dropdown-pane" id="code-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About Future Friendly <a href="http://futurefriendlyweb.com/thinking.html">a link</a></span></li>
-              <li><input type="checkbox" id="ossm8" name="ossm8" checked="checked" style="margin-right:.62rem;" style="padding-right:2rem;">is SEO friendly. <a data-toggle="code-dropdown02" style="font-size:.9rem">more</a> <span class="dropdown-pane" id="code-dropdown02" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">Our code adheres to best SEO practices, including heirarchical header tags, meta-description tags, and alt tags. Also, <a href="https://googlewebmastercentral.blogspot.com/2015/04/rolling-out-mobile-friendly-update.html">Google rewards mobile-friendly websites</a></span></li>
+              <li><input type="checkbox" id="ossm7" name="ossm7" checked="checked" style="margin-right:.62rem;">is Future Friendly. <a data-toggle="code-dropdown01" style="font-size:.9rem">+ more</a> <span class="dropdown-pane" id="code-dropdown01" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About Future Friendly <a href="http://futurefriendlyweb.com/thinking.html">a link</a></span></li>
+              <li><input type="checkbox" id="ossm8" name="ossm8" checked="checked" style="margin-right:.62rem;" style="padding-right:2rem;">is SEO friendly. <a data-toggle="code-dropdown02" style="font-size:.9rem">+ more</a> <span class="dropdown-pane" id="code-dropdown02" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">Our code adheres to best SEO practices, including heirarchical header tags, meta-description tags, and alt tags. Also, <a href="https://googlewebmastercentral.blogspot.com/2015/04/rolling-out-mobile-friendly-update.html">Google rewards mobile-friendly websites</a></span></li>
               <li><input type="checkbox" id="ossm9" name="ossm9" checked="checked" style="margin-right:.62rem;">adheres to best security practices. <!-- <a data-toggle="code-dropdown006" style="font-size:.9rem">+≫</a> <span class="dropdown-pane" id="code-dropdown006" data-dropdown data-options="closeOnClick: true; autoFocus: false;" style="color:#010101">About <a href="#">a link</a></span> --></li>
             </ul>
             </div>
@@ -214,7 +226,7 @@ min-height: 100vh;
       <div class="row">
       <div class="center">
         <h2 id="how-it-works">How it Works</h2>
-            <p><img src="img/The-Sprint-v2.png" alt="The 7-Day Sprint starts with the Kickoff Call and ends with the Demo Call.">
+            <div id="how-it-works-visual"><img src="img/before-01.gif" alt="The 7-Day Sprint starts with the Kickoff Call and ends with the Demo Call." class="how-it-works-visual" style="max-width: 32%; height: auto;"><img src="img/the-sprint-02.gif" alt="The 7-Day Sprint starts with the Kickoff Call and ends with the Demo Call." class="how-it-works-visual" style="max-width: 32%; height: auto;"><img src="img/after-03.gif" alt="The 7-Day Sprint starts with the Kickoff Call and ends with the Demo Call." class="how-it-works-visual" style="max-width: 32%; height: auto;"></div>
       </div>
      <br>
      <div class="large-8 medium-10 small-12 columns">
@@ -408,9 +420,22 @@ Any further changes need a change order with a deadline of the following Monday.
 
 
     <script src='js/jquery-psd2rwd.min.js'></script>
-<script src='js/foundation-6a.min.js'></script>
+<script src='js/foundation.min.js'></script>
 
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function(){
+$('.slick-carousel').slick({
+autoplay: true,
+autoplaySpeed: 6700,
+fade: true,
+focusOnSelect: true,
+lazyLoad: 'progressive',
+speed: 1670,
+pauseOnHover: false
+}); 
+</script>
   </body>
 </html>
   

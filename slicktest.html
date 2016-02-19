@@ -1,0 +1,81 @@
+ <html class="no-js" lang="en">
+  <head>
+     <meta charset="UTF-8">
+     <title>Slick Carousel</title>
+     <link rel="stylesheet" type="text/css" href="css/app.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="slick/slick.css">
+</head>
+  <body>
+
+ <div class="single-item">
+     <div id="bg1"></div>
+     <div id="bg1-l"></div>
+     <div id="bg2"></div>
+     <div id="bg2-l"></div>
+     <div id="bg3"></div>
+</div>
+
+<div class="flip device-spaceholder row right">
+    <div class="card">
+        <img class="front face" src="img/phone.png" />
+        <img src="img/laptop.png" class="back face" />
+    </div>
+</div>
+
+
+<div class="circle-container">
+    <div class="responsive-circle nyc-circle">
+        <div class="circle-inner">Small</div>
+    </div>
+    <div class="responsive-circle nyc-circle">
+        <div class="circle-inner">Medium</div>
+    </div>
+    <div class="responsive-circle nyc-circle">
+        <div class="circle-inner">Large</div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script type="text/javascript">
+$(document).ready(function(){
+$('.single-item').slick({
+autoplay: true,
+autoplaySpeed: 6700,
+fade: true,
+focusOnSelect: true,
+lazyLoad: 'progressive',
+speed: 1670,
+pauseOnHover: false
+}); 
+
+
+// On before slide change
+var flip = $('.flip');
+$('.single-item').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log(currentSlide);
+  console.log(currentSlide %2 == 0);
+  if (currentSlide %2 == 0) {
+    console.log('even');
+    //$('.phone').css('opacity', '0');
+    //$('.laptop').css('opacity', '1');
+      //$('.phone').delay(0).fadeTo(230, 1);
+     // $('.laptop').delay(0).fadeTo(230, 0);
+     flip.addClass('flipped');
+  }
+  else {
+    console.log('odd');
+    //$('.phone').css('opacity', 0);
+    //$('.laptop').css('opacity', 1);
+     // $('.phone').delay(0).fadeTo(230, 0);
+      //$('.laptop').delay(0).fadeTo(230, 1);
+      flip.removeClass('flipped');
+
+  }
+
+});
+
+});
+</script>
+</body>

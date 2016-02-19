@@ -52,4 +52,16 @@ window.onload = function loadStuff() {
   if (bigSrc) {
     img.src = bigSrc;
   }
+
+
+$('.slick-carousel').slick({
+autoplay: true,
+autoplaySpeed: 6700,
+fade: true,
+focusOnSelect: true,
+lazyLoad: 'progressive',
+speed: 1670,
+pauseOnHover: false
+}); 
+
 };

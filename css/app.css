@@ -1,14 +1,14 @@
+/*
 
+@font-face {
+  font-family: 'Brela';
+  src: url('Blaregular.otf');
+}
 
 @font-face {
   font-family: 'Muller';
   src: url('Muller-ExtraBold.otf');
-}
-
-@font-face {
-  font-family: 'Brela';
-  src: url('brelarefular.otf');
-}
+}*/
 
 
 html,body {
@@ -17,16 +17,17 @@ html,body {
     height:100%; /* needed for container min-height */
   }
 
-h1,h2,h3,h4,h5,h6{font-family: 'Muller', sans-serif;}
+/*h1,h2,h3,h4,h5,h6{font-family: 'Muller', sans-serif;}*/
+h1,h2,h3,h4,h5,h6{font-family: sans-serif;}
 
 body {
  /* font-family: 'Brela', serif;*/
  color: #0b0b0b;
 }
 
-.brela {
+/*.brela {
   font-family: 'Brela', serif;
-}
+}*/
 
 
 section { 
@@ -75,8 +76,31 @@ background-image: url(../img/bg-enhanced2.jpg);
 
   width: 100%;
   max-width: 100%;
+  position: relative;
+
 
   }
+
+.slick-carousel .hero {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#hero0 {
+  background-image: url(../img/phone-onsite.jpg);
+}
+
+#hero1 {
+  background-image: url(../img/phone-holding2.jpg);
+}
+
+#hero2 {
+  background-image: url(../img/phone-group-2.jpg);
+}
+
 
 
 .top-bar {
@@ -223,6 +247,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #how-it-works {
   margin-top: 3rem;
+}
+
+#how-it-works-visual {
+  text-align: center;
+}
+
+.how-it-works-visual-img {
+  max-width: 30% !important;
+  height: auto;
 }
 
 .section-pricing {
