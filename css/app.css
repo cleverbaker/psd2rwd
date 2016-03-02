@@ -41,7 +41,7 @@ img {
 }
 
 .button.hollow {
-  background-color: rgba(254,254,254,0.65);
+  background-color: rgba(254,254,254,0.95);
 }
 .section1 {
 
@@ -374,6 +374,7 @@ footer {
 .down-arrow {
     position: relative;
     left: 50%;
+    top: .5rem;
     margin-left: -.325rem;
     width: .65rem;
     height: .65rem;
@@ -407,5 +408,5 @@ footer {
 }
 
 #how-it-works-button {
-  padding-bottom: .45rem;
+  padding-bottom: 1rem;
 }
