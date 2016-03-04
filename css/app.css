@@ -410,3 +410,12 @@ footer {
 #how-it-works-button {
   padding-bottom: 1rem;
 }
+
+.based {
+  font-size: 133%;
+  width: 80%;
+}
+
+#in-person {
+  font-size: 75%;
+}
