@@ -80,11 +80,27 @@
 <script type="text/javascript">  
     $('document').ready(function() {
         'use strict';
+
+    var today = new Date();
+
+    var target = new Date(today);
+    target.setDate(7);
+    target.setHours(8,0,0,0);;
+
+    // Countdown start from yesterday
+    var yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    yesterday.setHours(0,0,0,0);;
+
         
+        var d = new Date();
+        var n = d.getTime();
+        console.log('n = ', n);
+
     	$('.countdown').final_countdown({
             'start': 1456760404,
-            'end': 1456850103,
-            'now': 1456760404        
+            'end': target.getTime() / 1000,
+            'now': today.getTime() / 1000        
         });
     });
 </script>
