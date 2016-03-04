@@ -1,0 +1,98 @@
+body {
+  background-color: #8cc63e;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+/* Use from here*/
+.flip-container {
+    position:absolute;
+    float: left; 
+    margin: 20px 20px 0 0; 
+}
+.flip-front {
+    position:absolute;
+    border:3px solid #1b75bb;
+    border-radius:4px;
+    z-index:20;
+    background-color: none;
+    backface-visibility: hidden;
+    transform: perspective(140px) rotateY(0deg);
+    transition: all 500ms;
+}
+.flip-back {
+    position:absolute;
+    border:3px solid #ed2a7b;
+    border-radius:4px;
+    z-index:10;
+    background-color: none;
+    backface-visibility: hidden;
+    transform: perspective(140px) rotateY(180deg);
+    transition: all 500ms;
+    overflow: hidden;
+}
+.flip-back div {
+  padding-top:20px; 
+  color:#666;
+  text-align:center;
+  font-size:12px;
+  text-transform:uppercase;
+  text-shadow:1px 1px 1px #999;
+  font-family:sans-serif;
+  background-color:#ddd;
+
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.flip-container:hover .flip-front {z-index:10;
+    backface-visibility: hidden;
+    transform: perspective(140px) rotateY(180deg);
+
+      opacity: 0.95;
+}
+.flip-container:hover .flip-back {z-index:20;
+    backface-visibility: hidden;
+    transform: perspective(140px) rotateY(360deg);
+}
+
+
+.laptop {
+  top: 400px;
+  height: 261px;
+  width: 444px;
+}
+
+.cinema-display {
+  top: 900px;
+  width: 390px;
+  height: 309px;
+}
+.laptop .flip-front, .laptop .flip-back {
+  width: 444px;
+  height: 261px;
+}
+.cinema-display .flip-front, .cinema-display .flip-back {
+  width: 390px;
+  height: 309px;
+}
+
+.phone img {
+  position: relative;
+  left: -130px;
+}
+.laptop img {
+  position: relative;
+  top: -391px;
+}
+.cinema-display img {
+  position: relative;
+  top: -694px;
+  left: -27px;
+}
+
+.phone {
+  width: 183px;
+  height: 374px;
+}
