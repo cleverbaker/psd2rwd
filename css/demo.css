@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+	overflow: auto;
 }
 
 html {
@@ -70,4 +71,13 @@ body {
 	.clock-item {
 		margin: 0px 30px 30px 30px;
 	}
+
+.countdown-container {
+    position: relative;
+    top: 5%; 
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
 }
