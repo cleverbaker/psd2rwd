@@ -134,6 +134,15 @@ background-image: url(../img/bg-enhanced2.jpg);
 }
 
 
+p {
+  font-size: 2rem;
+  max-width: 37.5rem;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
 
 
 /*
