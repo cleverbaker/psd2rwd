@@ -233,6 +233,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature {
   margin-top:0.5rem;
   margin-bottom:1rem;
+  max-width: 24rem;
 }
 
 .feature-icon {
@@ -323,8 +324,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .feature {
-    padding-right: 6rem !important;
-    padding-left: 2rem !important; /* TODO: should be for large displays only (too much for medium); */
+    padding-right: 1rem !important;
+    padding-left: 1rem !important; /* TODO: should be for large displays only (too much for medium); */
   }
 
 
