@@ -104,10 +104,14 @@ background-image: url(../img/bg-enhanced2.jpg);
 
 
 .top-bar {
-  height: 67px;
-  background: transparent;
-  overflow: auto;
-  padding: .25rem .5rem;
+    height: 67px;
+    background: transparent;
+    overflow: auto;
+    padding: .25rem .5rem;
+    display: block;
+    max-width: 64rem;
+    margin: 0 auto;
+    position: relative;
 }
 
 .top-bar-links {
