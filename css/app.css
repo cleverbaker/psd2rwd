@@ -208,6 +208,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
 }
 
+.medtxt {
+  font-size: 2rem;
+}
+
 .xltxt {
   font-size: 2.75rem;
 }
