@@ -34,6 +34,7 @@ section {
   width: 100%;
   padding: .625rem;
   margin: 0 auto;
+  overflow: auto;
 }
 
 img {
@@ -124,6 +125,14 @@ background-image: url(../img/bg-enhanced2.jpg);
 .top-bar .pricing {
   margin-right: 2rem;
 }
+
+.section2 .large-12, .all-container{
+    max-width: 64rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+
 
 
 
