@@ -84,7 +84,7 @@ h1, h2 {
     text-align: center;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .maxed {
     max-width: 50rem;
     margin-right: auto;
     margin-left: auto;
@@ -106,6 +106,16 @@ img {
 
 .right {
     text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.list {
+    max-width: 16rem;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 
@@ -166,19 +176,19 @@ img {
     <div class="row center">
         <img src="img/seven-day-sprint.gif" id="7-day-sprint">
     </div>
+    <div class="maxed">
+        <h2>The Sprint</h2>
 
-    <h2>The Sprint</h2>
+        <ul class="center list">
 
-    <ul>
+            <li class="left">✅ 7-day turnaround</li>
 
-        <li>✅ 7-day turnaround</li>
+            <li class="left">✅ Google stlye guides</li>
 
-        <li>✅ Google stlye guides</li>
+            <li class="left">✅ Ready to ship</li>
 
-        <li>✅ Ready to ship</li>
-
-    </ul>
-
+        </ul>
+    </div>
         <div class="row center">
             <button>What's next</button>
         </div>
