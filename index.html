@@ -85,25 +85,46 @@ h1, h2 {
 }
 
 img {
+    max-width: 100%;
 }
 
 .row {
     overflow: auto;
     margin-bottom:1.62em;
+    padding: 0 1.25rem;
 }
 
 .center {
     text-align: center;
 }
 
-.column-md-3 {
-    max-width: 33.3333333%;
-    float: left;
+.right {
+    text-align: right;
 }
+
 
 .links a {
     display: inline-block;
 }
+
+#logo {
+    padding: 1rem 0 0 1rem;
+}
+
+#how {
+    margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 40.063em) { 
+
+    .column-md-3 {
+        max-width: 33.3333333%;
+        float: left;
+    }
+
+}
+
+@media only screen and (min-width: 64.063em) { }
 
     </style>
 </head>
@@ -113,8 +134,7 @@ img {
 
     <section class="intro">
         <div class="row">
-
-            <img src="img/logo.jpg" alt="PSD 2 RWD">
+            <img src="img/logo.jpg" alt="PSD 2 RWD" id="logo">
         </div>  
 
         <h1>Photoshop design to responsive web development.</h1>
@@ -122,7 +142,7 @@ img {
             <img src="img/convert.jpg" alt="Convert your design into a mobile webpage.">
         </div>  
         <div class="row center">
-            <button id="trigger" href="#" onclick="smoothScroll(document.getElementById('oe0'), 2000)">How it works</button>
+            <button id="how" href="#" onclick="smoothScroll(document.getElementById('oe0'), 2000)">How it works</button>
         </div>  
     </section>
 
@@ -198,7 +218,17 @@ img {
 
     <footer class="footer">
 
-        <div class="links">
+    <div class="row">
+
+    <h2>We're currently in public <span style="font-style:italics">beta</span> with PSD 2 RWD</h2>
+
+    <h4 style="color:#3c88c3;">If you'd like to get started with a PSD 2 RWD conversion, or if you're curious and have a question,</h4>
+
+    <h3 style="color:#3c88c3;">email team@psd2rwd.com</h3>
+
+   </div>
+
+        <div class="links right">
 
             <a href="about.html">About Us</a> |
 
@@ -209,8 +239,11 @@ img {
         </div>
 
     </footer>
+
 <script>
+
 </script>
+
 </body>
 
 </html>
